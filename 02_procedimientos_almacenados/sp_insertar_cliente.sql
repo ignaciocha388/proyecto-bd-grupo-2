@@ -1,0 +1,19 @@
+-- =============================================
+-- PROCEDIMIENTO: SP_INSERTAR_CLIENTE
+-- Inserta un nuevo cliente en la tabla CLIENTES
+-- =============================================
+
+CREATE OR REPLACE PROCEDURE SP_INSERTAR_CLIENTE(
+    P_NOMBRE VARCHAR2,
+    P_TELEFONO VARCHAR2,
+    P_CORREO VARCHAR2,
+    P_DIRECCION VARCHAR2
+)
+AS
+BEGIN
+    INSERT INTO CLIENTES
+    (NOMBRE,TELEFONO,CORREO,DIRECCION)
+    VALUES
+    (P_NOMBRE,P_TELEFONO,P_CORREO,P_DIRECCION);
+END;
+/
